@@ -70,11 +70,11 @@ while True:
         if classIDBin == 2:
             # Logika untuk menggerakan servo sesuai dengan class ID 1
             servo.start(0)
-            servo.ChangeDutyCycle(5)
+            servo.ChangeDutyCycle(7.5)
             time.sleep(2)
             servo.ChangeDutyCycle(0)
             time.sleep(5)
-            servo.ChangeDutyCycle(12.5)
+            servo.ChangeDutyCycle(10)
             time.sleep(2)
             servo.stop ()
         if classIDBin == 3:
@@ -90,11 +90,11 @@ while True:
         if classIDBin == 4:
             # Logika untuk menggerakan servo sesuai dengan class ID 3
             servo.start(0)
-            servo.ChangeDutyCycle(5)
+            servo.ChangeDutyCycle(7.5)
             time.sleep(2)
             servo.ChangeDutyCycle(0)
             time.sleep(5)
-            servo.ChangeDutyCycle(12.5)
+            servo.ChangeDutyCycle(10)
             time.sleep(2)
             servo.stop ()
     imgBackground = cvzone.overlayPNG(imgBackground, imgBinsList[classIDBin], (895, 374))
