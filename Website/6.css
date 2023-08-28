@@ -1,0 +1,85 @@
+.77_27 { 
+	overflow:hidden;
+}
+.e77_27 { 
+	background-color:rgba(175.00000476837158, 213.00000250339508, 240.00000089406967, 1);
+	width:360px;
+	height:800px;
+	position:absolute;
+}
+.e170_32 { 
+	width:360px;
+	height:800px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-image:url(images/backround.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e81_4 { 
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	width:218px;
+	height:204px;
+	position:absolute;
+	left:71px;
+	top:542px;
+}
+.e81_6 { 
+	color:rgba(0, 0, 0, 1);
+	width:194px;
+	height:30px;
+	position:absolute;
+	left:48px;
+	top:544px;
+	font-family:Inter;
+	text-align:center;
+	font-size:24px;
+	letter-spacing:0;
+}
+.e77_28 { 
+	color:rgba(255, 255, 255, 1);
+	width:193px;
+	height:53px;
+	position:absolute;
+	left:84px;
+	top:145px;
+	font-family:Spicy Rice;
+	text-align:center;
+	font-size:16px;
+	letter-spacing:0;
+}
+.e77_30 { 
+	width:187px;
+	height:318px;
+	position:absolute;
+	left:87px;
+	top:219px;
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px;
+	background-image:url(images/organik_2.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e77_31 { 
+	width:136px;
+	height:113px;
+	position:absolute;
+	left:113px;
+	top:25px;
+	background-image:url(images/logo.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e77_29 { 
+	width:46.66666793823242px;
+	height:35px;
+	position:absolute;
+	left:0px;
+	top:8px;
+	background-image:url(images/back.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
