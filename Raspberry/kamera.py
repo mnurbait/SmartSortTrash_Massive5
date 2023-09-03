@@ -7,9 +7,13 @@ import time
 
 # Inisialisasi pin servo
 servo_pin = 13
+servo_pin1 = 12
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(servo_pin, GPIO.OUT)
-servo = GPIO.PWM(servo_pin, 50)  # 50Hz frequency
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(servo_pin1, GPIO.OUT)
+servo = GPIO.PWM(servo_pin, 50)
+servo1 = GPIO.PWM(servo_pin1, 50)
 
 cap = cv2.VideoCapture(0)
 classifier = Classifier('Resources/Model/keras_model.h5', 'Resources/Model/labels.txt')
@@ -60,43 +64,59 @@ while True:
         if classIDBin == 1:
             # Logika untuk menggerakan servo sesuai dengan class ID 0
             servo.start(0)
-            servo.ChangeDutyCycle(5)
+            servo1.start(0)
+            servo.ChangeDutyCycle(10)
             time.sleep(2)
-            servo.ChangeDutyCycle(0)
-            time.sleep(5)
-            servo.ChangeDutyCycle(12.5)
+            servo1.ChangeDutyCycle(7.5)
+            time.sleep(2)
+            servo1.ChangeDutyCycle(10)
+            time.sleep(2)
+            servo.ChangeDutyCycle(7.5)
             time.sleep(2)
             servo.stop ()
+            servo1.stop ()
         if classIDBin == 2:
             # Logika untuk menggerakan servo sesuai dengan class ID 1
             servo.start(0)
-            servo.ChangeDutyCycle(7.5)
-            time.sleep(2)
-            servo.ChangeDutyCycle(0)
-            time.sleep(5)
+            servo1.start(0)
             servo.ChangeDutyCycle(10)
             time.sleep(2)
+            servo1.ChangeDutyCycle(10)
+            time.sleep(2)
+            servo1.ChangeDutyCycle(7.5)
+            time.sleep(2)
+            servo.ChangeDutyCycle(7.5)
+            time.sleep(2)
             servo.stop ()
+            servo1.stop ()
         if classIDBin == 3:
             # Logika untuk menggerakan servo sesuai dengan class ID 2
             servo.start(0)
-            servo.ChangeDutyCycle(5)
-            time.sleep(2)
-            servo.ChangeDutyCycle(0)
-            time.sleep(5)
-            servo.ChangeDutyCycle(12.5)
-            time.sleep(2)
-            servo.stop ()
-        if classIDBin == 4:
-            # Logika untuk menggerakan servo sesuai dengan class ID 3
-            servo.start(0)
+            servo1.start(0)
             servo.ChangeDutyCycle(7.5)
             time.sleep(2)
-            servo.ChangeDutyCycle(0)
-            time.sleep(5)
+            servo1.ChangeDutyCycle(7.5)
+            time.sleep(2)
+            servo1.ChangeDutyCycle(10)
+            time.sleep(2)
             servo.ChangeDutyCycle(10)
             time.sleep(2)
             servo.stop ()
+            servo1.stop ()
+        if classIDBin == 4:
+            # Logika untuk menggerakan servo sesuai dengan class ID 3
+            servo.start(0)
+            servo1.start(0)
+            servo.ChangeDutyCycle(7.5)
+            time.sleep(2)
+            servo1.ChangeDutyCycle(10)
+            time.sleep(2)
+            servo1.ChangeDutyCycle(7.5)
+            time.sleep(2)
+            servo.ChangeDutyCycle(10)
+            time.sleep(2)
+            servo.stop ()
+            servo1.stop ()
     imgBackground = cvzone.overlayPNG(imgBackground, imgBinsList[classIDBin], (895, 374))
 
     imgBackground[148:148 + 340, 159:159 + 454] = imgResize
