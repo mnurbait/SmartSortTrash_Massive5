@@ -113,19 +113,19 @@ if __name__ == '__main__':
             print("Kapasitas Terukur 4 = %.1f " % dist4)
             send_data_to_ubidots(VARIABLE_LABEL_4, dist4)
 
-            if dist1 >= 95:
+            if dist1 >= 90:
                 message = "Sampah organik terisi penuhi! Berkut adalah lokasi tempat sampah : Link Gmaps"
                 send_notification_to_telegram(message, "Your_Telegram_Bot_Token", "Your_Chat_ID")
 
-            if dist2 >= 95:
+            if dist2 >= 90:
                 message = "Sampah plastik terisi penuh! Berkut adalah lokasi tempat sampah : Link Gmaps"
                 send_notification_to_telegram(message, "Your_Telegram_Bot_Token", "Your_Chat_ID")
 
-            if dist3 >= 95:
+            if dist3 >= 90:
                 message = "Sampah logam terisi penuh! Berkut adalah lokasi tempat sampah : Link Gmaps"
                 send_notification_to_telegram(message, "Your_Telegram_Bot_Token", "Your_Chat_ID")
 
-            if dist4 >= 95:
+            if dist4 >= 90:
                 message = "Sampah B3 terisi penuh! Berkut adalah lokasi tempat sampah : Link Gmaps"
                 send_notification_to_telegram(message, "Your_Telegram_Bot_Token", "Your_Chat_ID")
 
