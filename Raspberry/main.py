@@ -64,10 +64,10 @@ def distance(trigger_pin, echo_pin):
     while GPIO.input(echo_pin) == 1:
         StopTime = time.time()
 
+#perhitungan kapasitas
     TimeElapsed = StopTime - StartTime
     distance = (TimeElapsed * 34300) / 2
-    distance = distance / 50 # Kedalaman tempat sampah
-    distance = distance * 10
+    distance = (1 - distance / 50) * 100
 
     return distance
 
